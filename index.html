@@ -144,13 +144,13 @@ function go(){
   const dw=ws?WK.filter(x=>Math.abs(x-Number(w))<=3):WK;
   const pi=f.slice(PG*PP,(PG+1)*PP);const tp=Math.ceil(f.length/PP);
   let h='<thead><tr>';
-  h+='<th onclick="ss('ct')" class="'+(sC==='ct'?(sD>0?'sa':'sd'):'')+'">대분류</th>';
+  h+='<th onclick="ss(\\x27ct\\x27)" class="'+(sC==='ct'?(sD>0?'sa':'sd'):'')+'">대분류</th>';
   h+='<th>중분류</th>';
-  h+='<th onclick="ss('nm')" class="'+(sC==='nm'?(sD>0?'sa':'sd'):'')+'">품목명</th>';
+  h+='<th onclick="ss(\\x27nm\\x27)" class="'+(sC==='nm'?(sD>0?'sa':'sd'):'')+'">품목명</th>';
   h+='<th>코드</th>';
   dw.forEach(k=>{const s=String(k)===w;
     h+='<th onclick="ss('+k+')" class="'+(s?'ws ':'')+''+(sC===k?(sD>0?'sa':'sd'):'')+'">'+k+'주</th>'});
-  h+='<th onclick="ss('tt')" class="'+(sC==='tt'?(sD>0?'sa':'sd'):'')+'">합계</th></tr></thead><tbody>';
+  h+='<th onclick="ss(\\x27tt\\x27)" class="'+(sC==='tt'?(sD>0?'sa':'sd'):'')+'">합계</th></tr></thead><tbody>';
   pi.forEach(it=>{
     const d=(it.data[y]||{})[t]||{};const tot=Object.values(d).reduce((s,v)=>s+v,0);
     h+='<tr><td class="lb">'+it.cat+'</td><td class="lb">'+it.sub+'</td><td class="lb" title="'+it.name+'">'+it.name+'</td><td>'+it.code+'</td>';
